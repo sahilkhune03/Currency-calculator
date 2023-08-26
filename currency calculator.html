@@ -1,0 +1,72 @@
+<html>
+<head>
+<style>
+input[type="button"]{
+border-radius:10px;
+border-color:#0b03fc;
+background-color:#0ffc03;
+color:black;
+width:100%;
+}
+
+input[type="button"]:hover{
+background-color:#0b03fc;
+}
+input[type="text"]{
+border-radius:10px;
+}
+</style>
+<script>
+function clr(){
+document.getElementById("box").value="";
+}
+
+
+
+function  calculate(val){
+var x=document.getElementById("rbox").value;
+if(val==1){
+document.getElementById("dbox").value=x*0.013;}
+else{
+document.getElementById("pbox").value=x*0.010;}
+if(val==1){
+document.getElementById("sbox").value=x*0.012 ;}
+else{
+document.getElementById("qbox").value=x*1.16;}
+}
+</script>
+
+</head>
+<body>
+<center>
+<b><h1>Curency calculator</h1></b>
+<table>
+<tr>
+<td><img src="C:\Users\Lenovo\Downloads\india.webp" height="50" width="100"><input type="button" value="&#8377" onclick="clr()" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="100"><input type="text" id="rbox" placeholder="value in India" /></td>
+</tr>
+
+<tr>
+<td><img src="C:\Users\Lenovo\Downloads\united states.jpg" height="50" width="100"><input type="button" value="&#36" onclick="calculate('1')" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="dbox" placeholder="value in United states" /></td>
+</tr>
+<hr>
+<tr>
+<td><img src="C:\Users\Lenovo\Downloads\united kingdom.png" height="50" width="100"><input type="button" value="&#163" onclick="calculate('2')" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="pbox" placeholder="value United kingdom" /></td>
+</tr>
+<tr>
+<td><img src="C:\Users\Lenovo\Downloads\germany.webp" height="50" width="100"><input type="button" value="&#8364;" onclick="calculate('3')" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="sbox" placeholder="value Germany" /></td>
+</tr>
+<tr>
+<td><img src="C:\Users\Lenovo\Downloads\russia.webp" height="50" width="100"><input type="button" value="&#8381" onclick="calculate('4')" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="qbox" placeholder="value in Russia" /></td>
+</tr>
+
+</table>
+</center>
+
+
+</body>
+</html>
